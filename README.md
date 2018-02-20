@@ -1,6 +1,6 @@
 # aeiou
 
-This is a quick, messy bot which plays with Google Translate's tendency to mis-interpret strings of vowels as Hawaiian phrases, as documented [here](http://languagelog.ldc.upenn.edu/nll/?p=36753).
+This is a quick, messy bot which plays with Google Translate's tendency to mis-interpret strings of vowels as Hawaiian phrases, as documented [here](http://languagelog.ldc.upenn.edu/nll/?p=36753). It currently spits out to [this Twitter account](https://twitter.com/hawaiian_wisdom).
 
 This is the first bot I've built in a while, so I'm a bit rusty. It is quick and dirty, so doesn't automate everything. The basic premise is:
 
@@ -15,20 +15,22 @@ Drawbacks of this approach:
 - It works from my local machine, running Python in a virtual environment with the Google Translate API installed. It only tweets when the script is run, which is currently manual. (In fact, I'm working from home at the moment so just running it via the following Terminal command: <code>for i in {1..100}; do python /Users/o/Documents/github-root/bots/aeiou/translate_and_tweet.py; sleep 10m; done</code>
 - It uses IFTT, which is sometimes slow to run
 - It's just a bit messy and localised
+- It requires a paid Google Translate API account. It only costs a couple of Euro per month to run, but still, shame there isn't a free way.
 
+## Things I need to do
 
-Things I need to do
-
+- Make the code easily executable
 - Come up with a good project name
 - Rewrite this description
-- Make the code easily executable
 
-##How to make this work on your machine
+## How to make this work on your machine
 
-1. Create a new folder with project 'aeiou' (or whatever you want to call it)
-2. . Create virtual environment with python 3.6. NB – I have to do this in a few stages because my default Python is Anaconda, and it messes up installing Python 3.6 with pip (this process creates a venv *without* pip then installs pip):
+My computer is a flipping mess. 
+
+1. Create a new folder with project 'aeiou' (or whatever you want to call it), clone this directory into it.
+2. . Create virtual environment with python 3.6. NB – I have to do this in a few stages because my default Python is Anaconda, and it messes up installing Python 3.6 with pip (this process creates a venv *without* pip then installs pip). My venv is called <code>aeiou-venv</code>:
  <code>
-    python3 -m venv --without-pip test4
+    python3 -m venv --without-pip aeiou-venv
     source aeiou-venv/bin/activate
     curl https://bootstrap.pypa.io/get-pip.py | python
     deactivate
