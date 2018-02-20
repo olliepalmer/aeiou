@@ -2,6 +2,8 @@
 
 This is a quick, messy bot which plays with Google Translate's tendency to mis-interpret strings of vowels as Hawaiian phrases, as documented [here](http://languagelog.ldc.upenn.edu/nll/?p=36753). It currently spits out to [this Twitter account](https://twitter.com/hawaiian_wisdom).
 
+![](https://www.dropbox.com/s/k9b8kwtqyyk6pts/Screenshot%202018-02-20%2015.02.28.png?dl=1)
+
 This is the first bot I've built in a while, so I'm a bit rusty. It is quick and dirty, so doesn't automate everything. The basic premise is:
 
 - A Python script generates a random string of 250 vowels (a,e,i,o,u) and spaces. It connects to the Google Translate API and receives a translation
