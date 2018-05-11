@@ -1,0 +1,1 @@
+cd /Users/o/Documents/github-root/bots/aeiou; source aeiou-venv/bin/activate; python translate_and_tweet.py; deactivate
