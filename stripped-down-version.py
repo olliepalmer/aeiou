@@ -1,4 +1,4 @@
-import os, json, random
+import os, json, random 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credentials.json"
 from google.cloud import translate
 ancient_wisdom = translate.Client()
@@ -14,4 +14,5 @@ def impart_wisdom():
 	with open('wisdom.txt','a') as file:
 		file.write(make_legible['input'] + '\n' + make_legible['translatedText'] + '\n\n')
 
-impart_wisdom()
+for j in range(50):
+	impart_wisdom()
